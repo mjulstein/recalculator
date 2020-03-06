@@ -15,7 +15,7 @@ const Multiply = (
   const props = {
     onClick: () => {
       setResult(result * value);
-      setHistory([...history, {action: actionType.MUL, value}]);
+      setHistory([...history, {action: actionType.MULTIPLY, value}]);
     },
     disabled: disable(value)
   };

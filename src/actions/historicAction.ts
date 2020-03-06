@@ -1,10 +1,10 @@
 export enum actionType {
-  NA,
+  EQUAL,
   ADD,
-  SUB,
-  DIV,
-  MUL,
-  MOD
+  SUBTRACT,
+  DIVIDE,
+  MULTIPLY,
+  MODULO
 }
 
 export type historicAction = {action: actionType, value: number};

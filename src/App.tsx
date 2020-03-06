@@ -10,7 +10,7 @@ import Modulo from './buttons/Modulo';
 
 const App = () => {
   const [result, setResult] = useState(0);
-  const [history, setHistory] = useState([{action: actionType.NA, value: Number(0)}]);
+  const [history, setHistory] = useState([{action: actionType.EQUAL, value: Number(0)}]);
   const [value, setValue] = useState(0);
   const changeInput = (e: React.ChangeEvent<HTMLInputElement>) => setValue(Number(e.target.value));
 

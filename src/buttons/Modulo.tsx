@@ -7,7 +7,7 @@ const Modulo = ({result, setResult, value, history, setHistory, disable}: button
   const props = {
     onClick: () => {
       setResult(result % value);
-      setHistory([...history, {action: actionType.MOD, value}]);
+      setHistory([...history, {action: actionType.MODULO, value}]);
     },
     disabled: disable(value) || !Number.isInteger(result) || !Number.isInteger(value)
   };

@@ -15,7 +15,7 @@ const Divide = (
   const props = {
     onClick: () => {
       setResult(result / value);
-      setHistory([...history, {action: actionType.DIV, value}]);
+      setHistory([...history, {action: actionType.DIVIDE, value}]);
     },
     disabled: value === 0 || disable(value)
   };

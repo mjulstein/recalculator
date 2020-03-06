@@ -7,7 +7,7 @@ const Subtract = ({result, setResult, value, history, setHistory, disable}: butt
   const props = {
     onClick: () => {
       setResult(result - value);
-      setHistory([...history, {action: actionType.SUB, value}]);
+      setHistory([...history, {action: actionType.SUBTRACT, value}]);
     },
     disabled: disable(value)
   };

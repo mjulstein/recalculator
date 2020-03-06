@@ -12,13 +12,13 @@ function Result({result, history}: Props) {
     switch (action) {
       case actionType.ADD:
         return prev + value;
-      case actionType.SUB:
+      case actionType.SUBTRACT:
         return prev - value;
-      case actionType.DIV:
+      case actionType.DIVIDE:
         return prev / value;
-      case actionType.MUL:
+      case actionType.MULTIPLY:
         return prev * value;
-      case actionType.MOD:
+      case actionType.MODULO:
         return prev % value;
       default:
         return prev;
