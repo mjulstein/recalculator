@@ -3,7 +3,8 @@ export enum actionType {
   ADD,
   SUB,
   DIV,
-  MUL
-};
+  MUL,
+  MOD
+}
 
 export type historicAction = {action: actionType, value: number};

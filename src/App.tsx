@@ -6,6 +6,7 @@ import Add from './buttons/Add';
 import Divide from './buttons/Divide';
 import Multiply from './buttons/Multiply';
 import {actionType} from './actions/historicAction';
+import Modulo from './buttons/Modulo';
 
 const App = () => {
   const [result, setResult] = useState(0);
@@ -28,6 +29,7 @@ const App = () => {
         <Add {...buttonProps}/>
         <Divide {...buttonProps} />
         <Multiply {...buttonProps}/>
+        <Modulo {...buttonProps}/>
       </main>
     </div>
   );

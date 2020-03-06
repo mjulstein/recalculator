@@ -18,6 +18,8 @@ function Result({result, history}: Props) {
         return prev / value;
       case actionType.MUL:
         return prev * value;
+      case actionType.MOD:
+        return prev % value;
       default:
         return prev;
     }
