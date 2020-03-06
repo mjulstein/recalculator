@@ -1,12 +1,8 @@
 import React, {useState} from 'react';
 import './styles/App.css';
 import Result from './Result';
-import Subtract from './buttons/Subtract';
-import Add from './buttons/Add';
-import Divide from './buttons/Divide';
-import Multiply from './buttons/Multiply';
 import operatorType from './actions/operatorType';
-import Modulo from './buttons/Modulo';
+import {Add, Divide, Modulo, Multiply, Subtract} from './buttons';
 
 const App = () => {
   const [result, setResult] = useState(0);
