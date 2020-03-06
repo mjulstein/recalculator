@@ -1,7 +1,7 @@
 import React from 'react';
 import buttonProps from './buttonProps';
 import Button from './Button';
-import {actionType} from '../actions/historicAction';
+import operatorType from '../actions/operatorType';
 
 const Multiply = (
   {
@@ -15,7 +15,7 @@ const Multiply = (
   const props = {
     onClick: () => {
       setResult(result * value);
-      setHistory([...history, {action: actionType.MULTIPLY, value}]);
+      setHistory([...history, {operator: operatorType.MULTIPLY, value}]);
     },
     disabled: disable(value)
   };

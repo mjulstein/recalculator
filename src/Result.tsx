@@ -1,5 +1,6 @@
 import React from 'react';
-import {actionType, historicAction} from './actions/historicAction';
+import {historicAction} from './actions/historicAction';
+import reduceHistory from './func/reduceHistory';
 
 interface Props {
   result: number,
@@ -7,23 +8,7 @@ interface Props {
 }
 
 function Result({result, history}: Props) {
-  const currentTotal = history.reduce((prev, curr) => {
-    const {action, value} = curr;
-    switch (action) {
-      case actionType.ADD:
-        return prev + value;
-      case actionType.SUBTRACT:
-        return prev - value;
-      case actionType.DIVIDE:
-        return prev / value;
-      case actionType.MULTIPLY:
-        return prev * value;
-      case actionType.MODULO:
-        return prev % value;
-      default:
-        return prev;
-    }
-  }, 0);
+  const currentTotal = reduceHistory(history);
 
   return (
     <section>

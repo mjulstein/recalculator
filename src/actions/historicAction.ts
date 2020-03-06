@@ -1,10 +1,3 @@
-export enum actionType {
-  EQUAL,
-  ADD,
-  SUBTRACT,
-  DIVIDE,
-  MULTIPLY,
-  MODULO
-}
+import operatorType from './operatorType';
 
-export type historicAction = {action: actionType, value: number};
+export type historicAction = {operator: operatorType, value: number};

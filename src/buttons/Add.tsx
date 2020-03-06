@@ -1,13 +1,13 @@
 import React from 'react';
 import buttonProps from './buttonProps';
 import Button from './Button';
-import {actionType} from '../actions/historicAction';
+import operatorType from '../actions/operatorType';
 
 const Add = ({result, setResult, value, history, setHistory, disable}: buttonProps) => {
   const props = {
     onClick: () => {
       setResult(result + value);
-      setHistory([...history, {action: actionType.ADD, value}]);
+      setHistory([...history, {operator: operatorType.ADD, value}]);
     },
     disabled: disable(value)
   };

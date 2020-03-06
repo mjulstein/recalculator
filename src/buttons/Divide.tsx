@@ -1,7 +1,7 @@
 import React from 'react';
 import buttonProps from './buttonProps';
 import Button from './Button';
-import {actionType} from '../actions/historicAction';
+import operatorType from '../actions/operatorType';
 
 const Divide = (
   {
@@ -15,7 +15,7 @@ const Divide = (
   const props = {
     onClick: () => {
       setResult(result / value);
-      setHistory([...history, {action: actionType.DIVIDE, value}]);
+      setHistory([...history, {operator: operatorType.DIVIDE, value}]);
     },
     disabled: value === 0 || disable(value)
   };

@@ -5,12 +5,12 @@ import Subtract from './buttons/Subtract';
 import Add from './buttons/Add';
 import Divide from './buttons/Divide';
 import Multiply from './buttons/Multiply';
-import {actionType} from './actions/historicAction';
+import operatorType from './actions/operatorType';
 import Modulo from './buttons/Modulo';
 
 const App = () => {
   const [result, setResult] = useState(0);
-  const [history, setHistory] = useState([{action: actionType.EQUAL, value: Number(0)}]);
+  const [history, setHistory] = useState([{operator: operatorType.EQUAL, value: Number(0)}]);
   const [value, setValue] = useState(0);
   const changeInput = (e: React.ChangeEvent<HTMLInputElement>) => setValue(Number(e.target.value));
 
