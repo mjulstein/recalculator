@@ -1,29 +1,27 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "es5",
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "types",
+    "emitDeclarationOnly": true,
     "esModuleInterop": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "es2020",
     "moduleResolution": "node",
+    "outDir": "dist",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2016",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+    }
   },
-  "exclude": [
-    "node_modules"
-  ],
   "include": [
-    "src"
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/.eslintrc.js",
   ]
 }
