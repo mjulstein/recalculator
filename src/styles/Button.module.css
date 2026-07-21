@@ -1,0 +1,48 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 1rem;
+  background: var(--color-surface-button);
+  color: var(--color-text-primary);
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  min-height: 64px;
+  width: 100%;
+  transition: background 0.1s ease, transform 0.08s ease;
+}
+
+.numeric {
+  background: var(--color-surface-button-numeric);
+  font-size: 1.375rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+.button:active:not(:disabled) {
+  background: var(--color-surface-button-active);
+  transform: scale(0.96);
+}
+
+.button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  .button:hover:not(:disabled) {
+    background: var(--color-surface-button-active);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

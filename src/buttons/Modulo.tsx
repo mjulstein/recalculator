@@ -1,21 +1,14 @@
-import React from 'react';
-import buttonProps from './buttonProps';
-import Button from './Button';
-import operatorType from '../actions/operatorType';
+import { ButtonProps } from './buttonProps';
+import { Button } from './Button';
 
-const Modulo = ({result, setResult, value, history, setHistory, disable}: buttonProps) => {
-  const props = {
-    onClick: () => {
+export const Modulo = ({ result, setResult, value, history, setHistory, disable }: ButtonProps) => (
+  <Button
+    onClick={() => {
       setResult(result % value);
-      setHistory([...history, {operator: operatorType.MODULO, value}]);
-    },
-    disabled: disable(value) || !Number.isInteger(result) || !Number.isInteger(value)
-  };
-  return (
-    <Button {...props}>
-      Modulo
-    </Button>
-  );
-};
-
-export default Modulo;
+      setHistory([...history, { operator: 'MODULO', value }]);
+    }}
+    disabled={disable(value) || !Number.isInteger(result) || !Number.isInteger(value)}
+  >
+    Modulo
+  </Button>
+);

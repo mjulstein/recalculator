@@ -1,22 +1,15 @@
-import operatorType from '../actions/operatorType';
-import {historicAction} from '../actions/historicAction';
+import { HistoricAction } from '../actions/HistoricAction';
 
-const reduceHistory = (history: historicAction[]) => history.reduce((prev, curr) => {
-  const {operator, value} = curr;
-  switch (operator) {
-    case operatorType.ADD:
-      return prev + value;
-    case operatorType.SUBTRACT:
-      return prev - value;
-    case operatorType.DIVIDE:
-      return prev / value;
-    case operatorType.MULTIPLY:
-      return prev * value;
-    case operatorType.MODULO:
-      return prev % value;
-    default:
-      return prev;
-  }
-}, 0);
-
-export default reduceHistory;
+export const reduceHistory = (history: HistoricAction[]) =>
+  history.reduce((prev, curr) => {
+    const { operator, value } = curr;
+    switch (operator) {
+      case 'ADD':      return prev + value;
+      case 'SUBTRACT': return prev - value;
+      case 'DIVIDE':   return prev / value;
+      case 'MULTIPLY': return prev * value;
+      case 'MODULO':   return prev % value;
+      case 'TRIM':     return parseFloat(prev.toFixed(value));
+      default:         return prev;
+    }
+  }, 0);

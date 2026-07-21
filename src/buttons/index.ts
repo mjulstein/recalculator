@@ -1,7 +1,7 @@
-
-export {default as Add} from './Add';
-export {default as Subtract} from './Subtract';
-export {default as Divide} from './Divide';
-export {default as Multiply} from './Multiply';
-export {default as Modulo} from './Modulo';
-export {default as Equals} from './Equals';
+export { Add } from './Add';
+export { Subtract } from './Subtract';
+export { Divide } from './Divide';
+export { Multiply } from './Multiply';
+export { Modulo } from './Modulo';
+export { Equals } from './Equals';
+export { Trim } from './Trim';

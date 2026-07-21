@@ -1,21 +1,14 @@
-import React from 'react';
-import buttonProps from './buttonProps';
-import Button from './Button';
-import operatorType from '../actions/operatorType';
+import { ButtonProps } from './buttonProps';
+import { Button } from './Button';
 
-const Add = ({result, setResult, value, history, setHistory, disable}: buttonProps) => {
-  const props = {
-    onClick: () => {
+export const Add = ({ result, setResult, value, history, setHistory, disable }: ButtonProps) => (
+  <Button
+    onClick={() => {
       setResult(result + value);
-      setHistory([...history, {operator: operatorType.ADD, value}]);
-    },
-    disabled: disable(value)
-  };
-  return (
-    <Button {...props}>
-      Add
-    </Button>
-  );
-};
-
-export default Add;
+      setHistory([...history, { operator: 'ADD', value }]);
+    }}
+    disabled={disable(value)}
+  >
+    Add
+  </Button>
+);

@@ -1,30 +1,14 @@
-import React from 'react';
-import buttonProps from './buttonProps';
-import Button from './Button';
-import operatorType from '../actions/operatorType';
+import { ButtonProps } from './buttonProps';
+import { Button } from './Button';
 
-const Divide = (
-  {
-    result,
-    setResult,
-    value,
-    history,
-    setHistory,
-    disable
-  }: buttonProps) => {
-  const props = {
-    onClick: () => {
+export const Divide = ({ result, setResult, value, history, setHistory, disable }: ButtonProps) => (
+  <Button
+    onClick={() => {
       setResult(result / value);
-      setHistory([...history, {operator: operatorType.DIVIDE, value}]);
-    },
-    disabled: value === 0 || disable(value)
-  };
-
-  return (
-    <Button {...props}>
-      Divide
-    </Button>
-  );
-};
-
-export default Divide;
+      setHistory([...history, { operator: 'DIVIDE', value }]);
+    }}
+    disabled={value === 0 || disable(value)}
+  >
+    Divide
+  </Button>
+);

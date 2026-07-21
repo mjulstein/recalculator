@@ -1,13 +1,12 @@
-import {historicAction} from '../actions/historicAction';
-import {Dispatch, SetStateAction} from 'react';
+import { HistoricAction } from '../actions/HistoricAction';
+import { Dispatch, SetStateAction } from 'react';
 
-interface Props {
-  result: number,
-  setResult: Dispatch<SetStateAction<number>>,
-  value: number,
-  history: historicAction[],
-  setHistory: Dispatch<SetStateAction<historicAction[]>>,
-  disable: (val: number) => boolean
+export interface ButtonProps {
+  result: number;
+  setResult: Dispatch<SetStateAction<number>>;
+  value: number;
+  history: HistoricAction[];
+  setHistory: Dispatch<SetStateAction<HistoricAction[]>>;
+  disable: (val: number) => boolean;
+  decimalLength: number;
 }
-
-export default Props;
